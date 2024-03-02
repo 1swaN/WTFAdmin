@@ -40,15 +40,16 @@ const DragDropFile = ({ onFileChange }) => {
         }} 
       />
 
+
       <label htmlFor="input-file-upload" id="label-file-upload" className="upload-label" onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
-        <div>
+        <div className='drag__content'>
           <p>{t('post.pic')}</p>
           <button className="upload-button" onClick={handleButtonClick}>
             {t('post.picButton')}
           </button>
+          <input type="text" id="file-name" value={fileName} readOnly disabled/>
         </div>
       </label>
-      <input type="text" id="file-name" value={fileName} readOnly />
     </div>
   );
 };

@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPersonCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import DragDropFile from "./DragNDrop/DragDrop.js";
 import axios from "axios";
+import './Contacts/contacts-style.css'
 
 const sign = <FontAwesomeIcon icon={faPersonCircleCheck} size="2x" marginRight="10px" />;
 
@@ -104,17 +105,15 @@ function Form() {
         {text.isDirty && text.minLengthError && (
           <div className="form__error">{t("error.length")}</div>
         )}
-      </div>
-
-      <div className="input__data">
         <button
           type="submit"
-          className="send__btn form__control element-animation"
-          
+          className="form__btn element-animation form__control"
         >
-          {t("post.send")}
+          {t("post.button")}
         </button>
       </div>
+
+        
 
       {modalActive && (
         <Modal
